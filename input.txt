@@ -1,0 +1,3 @@
+Łukasz Stanisławowski;UoP;6900;50;8;
+Aleksander Jabłonowski;UoD;4200;YES;
+Marcin Osadowski;UZ;21.37;420;
