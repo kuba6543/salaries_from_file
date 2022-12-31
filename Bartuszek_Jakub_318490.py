@@ -16,34 +16,33 @@ def calculations(struct):
     for each in struct:
         if(struct[i][1]=="UoD"):
             if(struct[i][3]=="YES"):
-                salary[i] = float(struct[i][2])
+                salary.append(float(struct[i][2]))
             else:
-                salary[i] = 0
+                salary.append(0)
         elif(struct[i][1]=="UZ"):
             bid=float(struct[i][2])
             hours=float(struct[i][3])
-            salary[i] = bid * hours
+            salary.append(bid * hours)
         elif(struct[i][1]=="UoP"):
             basic_salary=float(struct[i][2])
             overtime_hours=float(struct[i][3])
             overtime_bid=float(struct[i][4])
-            salary[i] = basic_salary + overtime_hours * overtime_bid
+            salary.append(basic_salary + overtime_hours * overtime_bid)
         i=i+1
-        
     return salary
 
 def write_file(struct, salary, output_file): 
     output=[]
-    sum_of_salaries=0
-    for i in salary:
-        sum_of_salaries += salary[i]
-    output[0]=["Sum of salaries", sum_of_salaries]
+    output.append(["Sum of salaries", sum(salary)])
     i=0
-    if(output_file):    file=open(output_file, mode="w", encoding="utf8")
-    else:               file=open("a.out", mode="w",encoding="utf8")
+    file=open(output_file, mode="w", encoding="utf8")
     for each in struct:
-        file.writelines(output[i])
-        output[i+1]=[struct[i][0],salary[i]]
+        output.append([struct[i][0],salary[i]])
+        i=i+1
+    i=0
+    for each in output:
+        file.writelines(str(output[i]))
+        file.writelines("\n")
         i=i+1
     file.close()
 
