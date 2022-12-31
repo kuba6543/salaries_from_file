@@ -16,6 +16,7 @@ Program will read data from file, count and show salaries of workers mentioned i
 * write_file(struct, salary, output_file) - uses both lists "struct" and "salary" and writes to output_file (must be defined)
   
 ## Exemplary input and output:
+input.txt used from main repository folder
 
 ```
 python Bartuszek_Jakub_318490.py input.txt output.txt
