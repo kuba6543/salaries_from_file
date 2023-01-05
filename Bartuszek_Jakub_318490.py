@@ -48,7 +48,7 @@ def write_file(struct, salary, output_file):
         file.writelines("\n")
         i=i+1
     file.close()
-
-struct = read_from_file(sys.argv[1])
-salary = calculations(struct)
-write_file(struct, salary, sys.argv[2])
+if __name__ == "__main__":
+    struct = read_from_file(sys.argv[1])
+    salary = calculations(struct)
+    write_file(struct, salary, sys.argv[2])
