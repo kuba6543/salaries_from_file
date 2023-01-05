@@ -1,4 +1,7 @@
-import sys
+try:
+    import sys
+except:
+    raise Exception("Library sys not found, please consider reinstalling Python enviroment")
 
 def read_from_file(filename):
     file = open(filename,mode="r", encoding='utf8')
