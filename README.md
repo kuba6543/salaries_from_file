@@ -16,6 +16,8 @@ Program will read data from file, count and show salaries of workers mentioned i
 * write_data_to_a_file(database, salaries, output_file) - uses both lists "database" and "salaries" and writes to output_file (may be defined, if not, the output data is saved to a.out file in the same directory)
   
 ## Exemplary input and output:
+
+### First example: predefined output file
 input.txt used from main repository folder
 
 ```
@@ -28,7 +30,8 @@ output.txt
 ['Łukasz Stanisławowski', 7300.0]
 ['Marcin Osadowski', 8975.4]
 ['Aleksander Jabłonowski', 4200.0]
-
+```
+### Second example: NOT predefined output file
 ```
 python Bartuszek_Jakub_318490.py input.txt
 ```
